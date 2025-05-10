@@ -8,9 +8,12 @@ WGET_OPTS = [
     "--no-clobber",
     "--page-requisites",
     "--html-extension",
+    "--adjust-extension",
     "--convert-links",
     "--restrict-file-names=windows",
-    "--no-parent"
+    "--no-parent",
+    "--span-hosts",
+    "--execute", "robots=off"
 ]
 
 def download_url(url: str, output_dir: Path = None):
